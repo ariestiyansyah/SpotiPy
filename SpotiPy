@@ -4,7 +4,7 @@
 #            DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
 #                    Version 2, December 2004
 #
-# Copyright (C) 2016 Ariestiyansyah <ariestiyansyah.rizky@gmail.com
+# Copyright (C) 2016 Ariestiyansyah <ariestiyansyah.rizky@gmail.com>
 #
 # Everyone is permitted to copy and distribute verbatim or modified
 # copies of this license document, and changing it is allowed as long
@@ -60,6 +60,7 @@ class SpotifyCli(cmd.Cmd,object):
 
     def do_next(self, s):
         subprocess.call(Next, shell=True)
+        sleep(1)
         print "Track :"
         subprocess.call(Track, shell=True)
         print "Artist :"
@@ -71,6 +72,7 @@ class SpotifyCli(cmd.Cmd,object):
 
     def do_previous(self, s):
         subprocess.call(Previous, shell=True)
+        sleep(1)
         print "Track :"
         subprocess.call(Track, shell=True)
         print "Artist :"
